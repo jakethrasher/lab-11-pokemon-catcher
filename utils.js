@@ -18,29 +18,29 @@ let poke1 = getRandomPokemon();
 let poke2 = getRandomPokemon();
 let poke3 = getRandomPokemon();
 
+incrementSeen(poke1._id);
+incrementSeen(poke2._id);
+incrementSeen(poke3._id);
+
 while (poke1._id === poke2._id || poke2._id === poke3.id || poke1._id === poke3._id) {
     poke1 = getRandomPokemon();
     poke2 = getRandomPokemon();
     poke3 = getRandomPokemon();
 }
+
 const div = document.querySelector('#poke-container');
 div.append(renderPokeImage(poke1));
 div.append(renderPokeImage(poke2));
 div.append(renderPokeImage(poke3));
-
-
-
-
-
 
 function renderPokeImage(pokeItem) {
     const image = document.createElement('img');
     image.src = pokeItem.url_image;
     image.classList.add('poke-image');
     image.addEventListener('click', () => {
-        incrementSeen(pokeItem._id);
-    
+        incrementCaught(pokeItem._id);
     });
 
     return image;
 }
+

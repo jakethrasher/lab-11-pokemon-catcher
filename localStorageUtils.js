@@ -36,7 +36,10 @@ export function incrementSeen(_id) {
 }
 export function incrementCaught(_id) {
     const stats = getPokeStats();
+
     const caughtPoke = findByUnderScoreId(_id, stats);
 
     caughtPoke.caught++;
+    
+    setPokeStats(stats);
 }
