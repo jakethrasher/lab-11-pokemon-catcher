@@ -1,4 +1,7 @@
+import { getRandomPokemon } from './utils.js';
+import {getPokeStats } from './localStorageUtils.js';
 // import functions and grab DOM elements
+
 
 // initialize state
 
