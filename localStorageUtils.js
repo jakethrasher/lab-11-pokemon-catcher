@@ -53,5 +53,6 @@ export function incrementCaught(_id) {
 
 export function clearLocalStorage(){
     const emptyStats = [];
-    localStorage.setItem(JSON.stringify(emptyStats)); 
+    localStorage.setItem(POKESTATS, JSON.stringify(emptyStats)); 
+    window.location = '../';
 }

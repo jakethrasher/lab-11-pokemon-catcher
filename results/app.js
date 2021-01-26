@@ -1,4 +1,4 @@
-import { getPokeStats } from '../localStorageUtils.js';
+import { clearLocalStorage, getPokeStats } from '../localStorageUtils.js';
 import { findByUnderScoreId } from '../utils.js';
 import pokemon from '../pokemon.js';
 
@@ -31,4 +31,7 @@ for (let item of pokeStats) {
     tableElement.append(tableRow);
 }
 
-
+const resetButton = document.querySelector('button');
+resetButton.addEventListener('click', ()=>{
+    clearLocalStorage();
+});
