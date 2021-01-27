@@ -22,3 +22,13 @@ th{
     font-size: 3rem;
     text-align: center;
 }
+canvas {
+    width: 75%;
+    height: 500px;
+}
+.results-page-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

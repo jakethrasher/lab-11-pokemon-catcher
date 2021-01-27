@@ -3,8 +3,6 @@ import pokemon from './pokemon.js';
 
 let numberOfTurns = 0;
 
-
-
 export function getRandomPokemon() {
     let index = Math.floor(Math.random() * pokemon.length);
 
@@ -16,6 +14,7 @@ export function findByUnderScoreId(id, array) {
         if (id === item._id) return item;
     }
 }
+
 export function setThreePokemon() {
     numberOfTurns++;
 
@@ -23,13 +22,11 @@ export function setThreePokemon() {
     let poke2 = getRandomPokemon();
     let poke3 = getRandomPokemon();
 
-
     while (poke1._id === poke2._id || poke2._id === poke3._id || poke1._id === poke3._id) {
         poke1 = getRandomPokemon();
         poke2 = getRandomPokemon();
         poke3 = getRandomPokemon();
     }
-
 
     incrementSeen(poke1._id);
     incrementSeen(poke2._id);
@@ -42,9 +39,7 @@ export function setThreePokemon() {
     div.append(renderPokeImage(poke1));
     div.append(renderPokeImage(poke2));
     div.append(renderPokeImage(poke3));
-
 }
-
 
 export function renderPokeImage(pokeItem) {
     const image = document.createElement('img');
@@ -68,4 +63,3 @@ export function renderPokeImage(pokeItem) {
 
     return image;
 }
-

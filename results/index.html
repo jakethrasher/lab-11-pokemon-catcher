@@ -9,35 +9,33 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Results</title>
 </head>
 <body>
-  <h1 class="results-header">RESULTS</h1> 
+  <div class="results-page-top">
+    <h1 class="results-header">RESULTS</h1> 
+    <img src="../assets/drunkpikachu.png" width="200px">
+  </div>
   <main>
-      <section class="main-section">
-        <table style="width:100%">
-          <tr>
-            <th>Pokemon</th>
-            <th>Seen</th>
-            <th>Caught</th>
-          </tr>
-          <!-- <tr>
-            <td>metapod</td>
-            <td>1</td>
-            <td>0</td>
-          </tr> -->
-        </table>
-        <br>
-        <button>Play Again!</button>
-      </section>
-  </main>
-  <footer>
-      
-  </footer>
-  
+    <section class="main-section">
+      <table style="width:100%">
+        <tr>
+          <th>Pokemon</th>
+          <th>Seen</th>
+          <th>Caught</th>
+        </tr>
+      </table>
+      <br>
+      <button>Play Again!</button>
+      <canvas id="myChart"></canvas>
+    </section>
+</main>
+<footer>
+    
+</footer>
+
 <script type="module" src="app.js"></script>
-</body>
-  
+
 </html>
   
-                    
