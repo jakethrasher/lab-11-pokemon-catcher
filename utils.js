@@ -1,4 +1,4 @@
-import { incrementCaught, incrementSeen, getPokeStats } from './localStorageUtils.js';
+import { incrementCaught, incrementSeen } from './localStorageUtils.js';
 import pokemon from './pokemon.js';
 
 let numberOfTurns = 0;
@@ -29,7 +29,7 @@ export function setThreePokemon() {
         poke2 = getRandomPokemon();
         poke3 = getRandomPokemon();
     }
-   
+
 
     incrementSeen(poke1._id);
     incrementSeen(poke2._id);
@@ -63,7 +63,7 @@ export function renderPokeImage(pokeItem) {
 
             window.location = 'results';
         }
-       
+
     });
 
     return image;

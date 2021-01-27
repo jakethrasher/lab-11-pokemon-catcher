@@ -4,12 +4,12 @@ import pokemon from '../pokemon.js';
 
 const tableElement = document.querySelector('table');
 
-export function renderRow(pokemonCaught, pokemon) {
+export function renderRow(pokemonCaught) {
 
     const tableRow = document.createElement('tr');
 
     const tdPokeMon = document.createElement('td');
-    tdPokeMon.textContent = pokemon.pokebase;
+    tdPokeMon.textContent = pokemonCaught.name;
     tableRow.append(tdPokeMon);
 
     const tdCaughtPoke = document.createElement('td');
